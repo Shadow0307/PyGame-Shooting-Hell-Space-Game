@@ -86,9 +86,11 @@ def lose():
                         gameloop()
             gamewindow.fill(lose_color)
             text_blit("You lose!", black, 400, 200, 22)
-            text_blit("WOuld you like to play again, Press enter..", black, 400, 245, 22)
+            text_blit("Would you like to play again, Press enter..", black, 400, 245, 22)
             pygame.display.update()
             clock.tick(FPS)
+
+# Heart of my Game:
 
 def gameloop():
     global block_size, num, bullet, bullet_state, player
@@ -104,7 +106,7 @@ def gameloop():
     num = random.randint(5,31)
 
     player = ''
-    no_of_bullet = num + 3
+    no_of_bullet = num + 5
 
     bg1 = pygame.image.load('./img/bg.jpg').convert_alpha()
     bg = pygame.transform.scale(bg1, (WIDTH, HEIGHT))
@@ -209,5 +211,7 @@ def gameloop():
         clock.tick(FPS)
 
 gameloop()
+
+
 
         
